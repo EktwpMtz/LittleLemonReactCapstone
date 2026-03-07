@@ -1,0 +1,11 @@
+footer {
+    flex-direction: row;
+}
+
+footer > img, footer > article {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    gap: 12px;
+}
