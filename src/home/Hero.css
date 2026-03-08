@@ -4,13 +4,18 @@ section.hero {
 
 section.hero > div,
 section.hero > img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
     flex: 1;
+    gap: 18px;
 }
 
 section.hero > img {
     height: auto;
     border-radius: 12px;
-    background-color: gray;
+    background-color: lightgray;
 }
 
 a.btn {

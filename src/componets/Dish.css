@@ -1,0 +1,24 @@
+article.dish {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    align-items: flex-start;
+}
+
+article.dish img {
+    width: 100%;
+    max-width: 400px;
+    min-height: 200px;
+    border-radius: 8px;
+    background-color: lightgray;
+
+    text-align: center;
+}
+
+article.dish div.dish-content {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px 18px;
+}

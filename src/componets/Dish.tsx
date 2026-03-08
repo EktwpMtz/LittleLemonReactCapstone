@@ -1,11 +1,22 @@
-export const Dish = () => {
+import './Dish.css';
+
+export type DishProps = {
+    name: string;
+    description: string;
+    price: string;
+    imageUrl: string;
+}
+
+export const Dish = ({ name, description, price, imageUrl }: DishProps) => {
     return (
-        <article>
-            <img src="/assets/dish.jpg" alt="Delicious dish at Little Lemon" className="dish-image" />
+        <article className='dish'>
+            <img src={imageUrl} alt={`${name} picture`} className="dish-image" />
             <div className="dish-content">
-                <h3>Grilled Salmon with Lemon Butter</h3>
-                <p>Fresh salmon fillet grilled to perfection, topped with a zesty lemon butter sauce. Served with seasonal vegetables and your choice of side.</p>
-                <p className="price">$18.99</p>
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <p className="price">{price}</p>
+
+                <button className="order-btn">Order a delivery</button>
             </div>
         </article>
     );
