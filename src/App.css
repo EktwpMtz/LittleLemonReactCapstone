@@ -10,18 +10,6 @@ body {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 }
 
-
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  min-height: 100dvh;
-  line-height: 1.15;
-  gap: 36px;
-}
-
 header, section, footer {
   display: flex;
   flex-direction: column;

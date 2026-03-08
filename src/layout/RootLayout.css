@@ -1,0 +1,9 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 100dvh;
+  line-height: 1.15;
+  gap: 36px;
+}
