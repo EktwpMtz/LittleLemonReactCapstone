@@ -19,8 +19,13 @@ article.dish div.dish-content {
   display: flex;
   flex-direction: column;
 
+  flex: 1;
   padding: 0px 18px;
   gap: var(--small-gap);
+}
+
+div.dish-content p.dish-description {
+  flex: 1;
 }
 
 article.dish .dish-header {

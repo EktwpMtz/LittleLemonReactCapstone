@@ -1,9 +1,15 @@
-section.hero {
+div.hero-container {
   display: flex;
-  flex-direction: row;
-
+  justify-content: center;
+  width: 100%;
+  padding: var(--large-gap);
   background-color: var(--primary-2-color);
   color: var(--highlight-1-color);
+}
+
+section#hero {
+  display: flex;
+  flex-direction: row;
 }
 
 section#hero > div,

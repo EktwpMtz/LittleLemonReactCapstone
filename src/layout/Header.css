@@ -1,4 +1,4 @@
-header {
+header#header {
   flex-direction: row;
   align-items: center;
 
@@ -7,7 +7,6 @@ header {
 
 header img {
   width: 160px;
-  height: 100px;
 }
 
 nav {

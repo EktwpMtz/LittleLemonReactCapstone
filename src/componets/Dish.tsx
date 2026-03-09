@@ -25,7 +25,7 @@ export const Dish = ({
           <h3>{name}</h3>
           <strong className="price">{price}</strong>
         </div>
-        <p>{description}</p>
+        <p className="dish-description">{description}</p>
 
         <Button onClick={addToOrder}>Order a delivery</Button>
       </div>

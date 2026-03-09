@@ -2,7 +2,7 @@ import './Footer.css';
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer id="footer">
       <img src="/footer-logo.png" alt="Little Lemon Logo" />
       <article>
         <h2>Doormat navigation</h2>

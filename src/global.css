@@ -38,6 +38,7 @@ body {
   font-family: var(--paragraph-font-family);
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-line-height);
+  color: var(--highlight-2-color);
 }
 
 h1,
@@ -52,6 +53,7 @@ h6 {
 }
 
 header,
+main,
 main section,
 footer {
   display: flex;
@@ -80,4 +82,8 @@ li {
 .column {
   display: flex;
   flex-direction: column;
+}
+
+.primary-text {
+  color: var(--primary-1-color);
 }

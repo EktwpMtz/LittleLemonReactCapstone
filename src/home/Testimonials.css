@@ -16,10 +16,11 @@ article.testimonial-card {
   align-items: center;
 
   flex: 1;
-  padding: 20px;
+  padding: var(--medium-gap);
   gap: var(--small-gap);
 
-  background-color: lightgray;
+  background-color: var(--secondary-2-color);
+  color: var(--highlight-2-color);
   border-radius: var(--border-radius);
 }
 
@@ -27,7 +28,6 @@ article.testimonial-card img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: gray;
 
   text-align: center;
 }

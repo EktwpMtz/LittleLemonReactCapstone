@@ -1,4 +1,4 @@
-footer {
+footer#footer {
   flex-direction: row;
   padding: var(--large-gap) 0px;
 }

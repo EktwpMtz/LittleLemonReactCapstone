@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import App from './App';
+import { HomePage } from './home/HomePage';
 import { BookingPage } from './booking/BookingPage';
 import { RootLayout } from './layout/RootLayout';
 import { MenuPage } from './menu/MenuPage';
+import './global.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +13,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route element={<RootLayout />}>
-          <Route index element={<App />} />
+          <Route index element={<HomePage />} />
           <Route path="booking" element={<BookingPage />} />
           <Route path="menu" element={<MenuPage />} />
         </Route>

@@ -3,7 +3,7 @@ import './Header.css';
 
 export const Header = () => {
   return (
-    <header>
+    <header id="header">
       <img src="/logo.svg" alt="Little Lemon Logo" className="logo" />
       <nav>
         <NavLink to="/">Home</NavLink>
