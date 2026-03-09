@@ -18,18 +18,3 @@ section.hero > img {
     border-radius: var(--border-radius);
     background-color: lightgray;
 }
-
-a.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f4ce14;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    transition: background-color 0.3s;
-}
-
-a.btn:hover {
-    background-color: #e0b800;
-}

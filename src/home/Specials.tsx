@@ -1,5 +1,7 @@
+import { NavLink } from "react-router";
 import { Dish, DishProps } from "../componets/Dish"
 import './Specials.css'
+import { Button } from "../componets/Button";
 
 const specials: DishProps[] = [
     {
@@ -27,7 +29,9 @@ export const Specials = () => {
         <section className="specials">
             <div className="specials-header">
                 <h1>Specials</h1>
-                <a href="#menu" className="btn">Online Menu</a>
+                <NavLink to="/menu">
+                    <Button>Online Menu</Button>
+                </NavLink>
             </div>
             <div className="specials-dishes">
                 {specials.map((dish, index) => (

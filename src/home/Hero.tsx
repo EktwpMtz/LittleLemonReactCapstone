@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router';
 import './Hero.css';
+import { Button } from '../componets/Button';
 
 export const Hero = () => {
     return (
@@ -7,7 +9,11 @@ export const Hero = () => {
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>
                 <p>Experience the best of Mediterranean cuisine in a cozy and vibrant atmosphere.</p>
-                <a href="#menu" className="btn">Explore Our Menu</a>
+                <NavLink to="/menu">
+                    <Button>
+                        Explore Our Menu
+                    </Button>
+                </NavLink>
             </div>
             <img src="/assets/hero-image.jpg" alt="Delicious food at Little Lemon" className="hero-image" />
         </section>
