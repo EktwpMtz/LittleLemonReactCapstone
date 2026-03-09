@@ -21,4 +21,10 @@ article.dish div.dish-content {
     flex-direction: column;
 
     padding: 0px 18px;
+    gap: var(--small-gap);
+}
+
+article.dish .dish-header {
+    justify-content: space-between;
+    align-items: flex-start;
 }

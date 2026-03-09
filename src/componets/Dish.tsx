@@ -1,4 +1,5 @@
 import './Dish.css';
+import { Button } from './Button';
 
 export type DishProps = {
     name: string;
@@ -14,11 +15,15 @@ export const Dish = ({ name, description, price, imageUrl, addToOrder }: DishPro
         <article className='dish'>
             <img src={imageUrl} alt={`${name} picture`} className="dish-image" />
             <div className="dish-content">
-                <h3>{name}</h3>
+                <div className="row dish-header">
+                    <h3>{name}</h3>
+                    <p className="price">{price}</p>
+                </div>
                 <p>{description}</p>
-                <p className="price">{price}</p>
 
-                <button className="order-btn" onClick={addToOrder}>Order a delivery</button>
+                <Button onClick={addToOrder}>
+                    Order a delivery
+                </Button>
             </div>
         </article>
     );
