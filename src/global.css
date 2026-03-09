@@ -16,6 +16,7 @@
   --paragraph-line-height: 1.5;
 
   /* Spacing */
+  --x-small-gap: 8px;
   --small-gap: 12px;
   --medium-gap: 24px;
   --large-gap: 36px;
@@ -39,6 +40,12 @@ body {
   font-size: var(--paragraph-font-size);
   line-height: var(--paragraph-line-height);
   color: var(--highlight-2-color);
+}
+
+ hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--highlight-2-color);
 }
 
 h1,

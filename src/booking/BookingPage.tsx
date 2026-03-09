@@ -13,13 +13,13 @@ export const BookingPage = () => {
       <h1>Reservation at Little Lemon Restaurant</h1>
       <article className="booking-process">
         <img
-          src="/assets/booking-image.jpg"
+          src="/restaurant.jpg"
           alt="Restaurant"
           className="booking-image"
         />
         <div className="booking-steps">
-          <span>1) Find a table</span>
-          <span>2) Choose a date</span>
+          <span data-active={step === 1}>1) Find a table</span>
+          <span data-active={step === 2}>2) Choose a date</span>
         </div>
         <hr></hr>
         {step === 1 ? (

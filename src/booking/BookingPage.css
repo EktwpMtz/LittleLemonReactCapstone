@@ -10,7 +10,8 @@ article.booking-process > img {
   width: 100%;
   height: 400px;
 
-  background-color: lightgray;
+  object-fit: cover;
+  border-radius: var(--border-radius);
 }
 
 article.booking-process {
@@ -31,6 +32,18 @@ div.booking-steps {
   align-items: center;
   justify-content: center;
   gap: 8px;
+}
+
+div.booking-steps > span {
+  padding: var(--x-small-gap) var(--small-gap);
+  border-radius: var(--border-radius);
+  background-color: var(--highlight-1-color);
+  color: var(--primary-2-color);
+}
+
+div.booking-steps > span[data-active="true"] {
+  background-color: var(--primary-2-color);
+  color: var(--highlight-1-color);
 }
 
 div.booking-form {
