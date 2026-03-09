@@ -9,8 +9,7 @@ export const About = () => {
           <strong>Chicago</strong>
         </p>
         <p>
-          Experience the best of Mediterranean cuisine in a cozy and vibrant
-          atmosphere.
+          Little Lemon was founded by brothers Mario and Adrian, who grew up in their grandmother's kitchen on the Amalfi Coast. After years of training in renowned kitchens across Italy and Greece, they brought their passion and expertise to Chicago, creating a warm, welcoming space where traditional Mediterranean cooking meets contemporary culinary artistry. Every dish tells a story of their heritage, crafted with love and the finest ingredients.
         </p>
       </div>
       <img 

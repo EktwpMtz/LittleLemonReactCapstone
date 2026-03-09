@@ -14,8 +14,7 @@ export const Hero = () => {
             </p>
           </div>
           <p>
-            Experience the best of Mediterranean cuisine in a cozy and vibrant
-            atmosphere.
+            We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. Our menu features fresh, locally-sourced ingredients transformed into authentic dishes that celebrate the rich flavors of the Mediterranean coast.
           </p>
           <NavLink to="/menu" aria-label="Navigate to our menu page">
             <Button>Explore Our Menu</Button>

@@ -5,23 +5,23 @@ import { Button } from '../componets/Button';
 
 const specials: DishProps[] = [
   {
-    name: 'Grilled Salmon with Lemon Butter',
+    name: 'Greek Salad',
     description:
-      'Fresh salmon fillet grilled to perfection, topped with a zesty lemon butter sauce. Served with seasonal vegetables and your choice of side.',
+      'A refreshing blend of crisp lettuce, ripe tomatoes, cucumbers, Kalamata olives, and tangy feta cheese, all tossed in a light vinaigrette dressing.',
     price: '$18.99',
     imageUrl: '/greek salad.jpg',
   },
   {
-    name: 'Lemon Herb Chicken',
+    name: 'Lemon dessert',
     description:
-      'Juicy chicken breast marinated in a blend of lemon juice, garlic, and herbs, then grilled to perfection. Served with a side of roasted potatoes and steamed broccoli.',
+      'A zesty and sweet treat featuring layers of tangy lemon curd, fluffy meringue, and a buttery graham cracker crust, creating a perfect balance of flavors in every bite.',
     price: '$15.99',
     imageUrl: '/lemon dessert.jpg',
   },
   {
-    name: 'Vegetarian Pasta Primavera',
+    name: 'Bruschetta',
     description:
-      'A colorful medley of fresh vegetables sautéed in olive oil and garlic, tossed with al dente pasta and finished with a sprinkle of Parmesan cheese.',
+      'Grilled slices of crusty bread topped with a vibrant mixture of diced tomatoes, fresh basil, garlic, and a drizzle of olive oil, creating a delicious and refreshing appetizer.',
     price: '$13.99',
     imageUrl: '/bruchetta.svg',
   },
