@@ -1,11 +1,20 @@
-main.menu {
+main#menu {
   display: flex;
   flex-direction: column;
   max-width: 1344px;
 }
 
-main.menu > section {
-  gap: 24px;
+main#menu > h1 {
+  color: var(--primary-2-color);
+}
+
+section#menu-categories h2 {
+  color: var(--primary-2-color);
+}
+
+main#menu > section {
+  max-width: unset;
+  gap: var(--medium-gap);
   align-items: flex-start;
 }
 
@@ -15,30 +24,36 @@ div.menu-categories {
   align-items: center;
 
   flex: 1;
-  gap: 24px;
+  gap: var(--medium-gap);
 }
 
 div.menu-categories > ul {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: var(--medium-gap);
 }
 
 article.menu-items {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 24px;
+  gap: var(--medium-gap);
 }
 
-aside.summary {
+aside#summary {
   display: flex;
   flex-direction: column;
 
   flex: 1 1 420px;
   max-width: 420px;
-  padding: 12px;
-  gap: 18px;
+  border-radius: var(--border-radius);
+  padding: var(--medium-gap);
+  gap: var(--medium-gap);
 
-  background-color: lightgray;
+  background-color: var(--primary-2-color);
+  color: var(--highlight-1-color);
+}
+
+aside#summary > h2 {
+  color: var(--primary-1-color);
 }
