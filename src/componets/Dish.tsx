@@ -5,9 +5,11 @@ export type DishProps = {
     description: string;
     price: string;
     imageUrl: string;
+
+    addToOrder?: () => void;
 }
 
-export const Dish = ({ name, description, price, imageUrl }: DishProps) => {
+export const Dish = ({ name, description, price, imageUrl, addToOrder }: DishProps) => {
     return (
         <article className='dish'>
             <img src={imageUrl} alt={`${name} picture`} className="dish-image" />
@@ -16,7 +18,7 @@ export const Dish = ({ name, description, price, imageUrl }: DishProps) => {
                 <p>{description}</p>
                 <p className="price">{price}</p>
 
-                <button className="order-btn">Order a delivery</button>
+                <button className="order-btn" onClick={addToOrder}>Order a delivery</button>
             </div>
         </article>
     );

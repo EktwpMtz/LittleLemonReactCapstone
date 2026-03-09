@@ -14,7 +14,7 @@ export const Header = () => {
                     <li><a href="#login">Login</a></li> */}
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="#about">About</NavLink>
-                    <NavLink to="#menu">Menu</NavLink>
+                    <NavLink to="/menu">Menu</NavLink>
                     <NavLink to="/booking">Reservations</NavLink>
                     <NavLink to="#order">Order Online</NavLink>
                     <NavLink to="#login">Login</NavLink>

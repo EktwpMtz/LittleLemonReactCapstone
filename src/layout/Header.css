@@ -21,6 +21,8 @@ nav {
 }
 
 nav a {
+    font-family: "Markazi Text", serif;
+    font-size: var(--card-title-font-size);
     text-decoration: none;
     font-weight: bold;
     color: black;

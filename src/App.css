@@ -1,3 +1,18 @@
+:root {
+  --primary-color: #f4ce14;
+  --secondary-color: #495e57;
+  --accent-color: #edefee;
+
+  --heading-font-family: "Markazi Text", serif;
+  --paragraph-font-family: "Karla", sans-serif;
+
+  --paragraph-font-size: 16px;
+  --card-title-font-size: 18px;
+  --sub-title-font-size: 40px;
+
+  --paragraph-line-height: 1.5;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,14 +22,36 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
 }
 
-header, section, footer {
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+header, main, footer {
   display: flex;
   flex-direction: column;
 
   width: 100%;
   max-width: 890px;
   gap: 36px;
+}
+
+li {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }

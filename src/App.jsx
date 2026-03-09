@@ -5,11 +5,11 @@ import { Testimonials } from './home/Testimonials';
 
 const App = () => {
   return (
-    <>
+    <main>
       <Hero />
       <Specials />
       <Testimonials />
-    </>
+    </main>
   );
 };
 

@@ -2,7 +2,7 @@ import './Hero.css';
 
 export const Hero = () => {
     return (
-        <section className="hero">
+        <section id='hero' className="hero">
             <div className="hero-content">
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>

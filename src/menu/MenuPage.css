@@ -1,0 +1,44 @@
+main.menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 1344px;
+}
+
+main.menu > section {
+    gap: 24px;
+    align-items: flex-start;
+}
+
+div.menu-categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    flex: 1;
+    gap: 24px;
+}
+
+div.menu-categories > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+article.menu-items {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+aside.summary {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 420px;
+    max-width: 420px;
+    padding: 12px;
+    gap: 18px;
+
+    background-color: lightgray;
+}
