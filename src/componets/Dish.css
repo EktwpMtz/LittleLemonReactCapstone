@@ -8,10 +8,9 @@ article.dish {
 
 article.dish img {
   width: 100%;
-  max-width: 400px;
-  min-height: 200px;
-  border-radius: 8px;
-  background-color: lightgray;
+  height: 200px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
 
   text-align: center;
 }
@@ -27,4 +26,8 @@ article.dish div.dish-content {
 article.dish .dish-header {
   justify-content: space-between;
   align-items: flex-start;
+}
+
+article.dish .price {
+  color: var(--secondary-1-color);
 }

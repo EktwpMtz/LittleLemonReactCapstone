@@ -17,7 +17,7 @@ export const Hero = () => {
         </NavLink>
       </div>
       <img
-        src="/assets/hero-image.jpg"
+        src="/restaurant.jpg"
         alt="Delicious food at Little Lemon"
         className="hero-image"
       />

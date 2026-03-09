@@ -1,6 +1,9 @@
 section.hero {
   display: flex;
   flex-direction: row;
+
+  background-color: var(--primary-2-color);
+  color: var(--highlight-1-color);
 }
 
 section#hero > div,
@@ -14,6 +17,7 @@ section#hero > img {
 }
 
 section#hero > img {
+  max-width: 50%;
   height: auto;
   border-radius: var(--border-radius);
   background-color: lightgray;

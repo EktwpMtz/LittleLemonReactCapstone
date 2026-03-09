@@ -1,7 +1,10 @@
 :root {
-  --primary-color: #f4ce14;
-  --secondary-color: #495e57;
-  --accent-color: #edefee;
+  --primary-1-color: #f4ce14;
+  --primary-2-color: #495e57;
+  --secondary-1-color: #EE9972;
+  --secondary-2-color: #FBDABB;
+  --highlight-1-color: #EDEFEE;
+  --highlight-2-color: #333333;
 
   --heading-font-family: "Markazi Text", serif;
   --paragraph-font-family: "Karla", sans-serif;
@@ -49,7 +52,7 @@ h6 {
 }
 
 header,
-main,
+main section,
 footer {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,7 @@ export const About = () => {
           atmosphere.
         </p>
       </div>
-      <img src="" alt="Little Lemon" />
+      <img src="/Mario and Adrian A.jpg" alt="Little Lemon" />
     </section>
   );
 };

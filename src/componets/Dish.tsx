@@ -23,7 +23,7 @@ export const Dish = ({
       <div className="dish-content">
         <div className="row dish-header">
           <h3>{name}</h3>
-          <p className="price">{price}</p>
+          <strong className="price">{price}</strong>
         </div>
         <p>{description}</p>
 
