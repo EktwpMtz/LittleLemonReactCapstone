@@ -1,46 +1,46 @@
 section.booking {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width: 100%;
-    max-width: 660px;
+  width: 100%;
+  max-width: 660px;
 }
 
 article.booking-process > img {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 article.booking-process {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-    padding: 20px;
+  padding: 20px;
 }
 
 article.booking-process > div {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 
 div.booking-steps {
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 div.booking-form {
-    gap: 12px;
+  gap: 12px;
 }
 
 div.booking-form > form,
 div.booking-form > div {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
 }

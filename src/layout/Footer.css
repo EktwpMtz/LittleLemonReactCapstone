@@ -1,19 +1,18 @@
 footer {
-    flex-direction: row;
+  flex-direction: row;
+  padding: var(--large-gap) 0px;
 }
 
-footer > img, footer > article {
-    display: flex;
-    flex-direction: column;
+footer > img,
+footer > article {
+  display: flex;
+  flex-direction: column;
 
-    flex: 1;
-    gap: var(--small-gap);
+  flex: 1;
+  gap: var(--small-gap);
 }
 
 footer > img {
-    width: 100%;
-    height: 200px;
-    border-radius: 12px;
-
-    background-color: lightgray;
+  width: 100%;
+  height: 200px;
 }

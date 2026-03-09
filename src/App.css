@@ -26,6 +26,7 @@
   padding: 0;
   outline: none;
   border: none;
+  object-fit: contain;
 }
 
 body {
@@ -36,13 +37,20 @@ body {
   line-height: var(--paragraph-line-height);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font-family);
   font-optical-sizing: auto;
   font-style: normal;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   display: flex;
   flex-direction: column;
 

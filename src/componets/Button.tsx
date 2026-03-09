@@ -1,11 +1,11 @@
 import './Button.css';
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({ onClick, children }: ButtonProps) => {
-    return (
-        <button onClick={onClick}>
-            {children}
-        </button>
-    );
-}
+export const Button = ({ children, type = 'button', ...args }: ButtonProps) => {
+  return (
+    <button type={type} {...args}>
+      {children}
+    </button>
+  );
+};
