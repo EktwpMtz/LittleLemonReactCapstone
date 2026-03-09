@@ -1,8 +1,8 @@
-section.testimonials {
+section#testimonials {
   align-items: center;
 }
 
-section.testimonials > div.testimonial-cards {
+section#testimonials > div.testimonial-cards {
   display: flex;
   flex-direction: row;
   width: 100%;

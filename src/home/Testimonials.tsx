@@ -28,9 +28,9 @@ const testimonials: TestimonialProps[] = [
 ////https://i.pravatar.cc/150?img=3
 export const Testimonials = () => {
   return (
-    <section className="testimonials">
-      <h1>Testimonials</h1>
-      <div className="testimonial-cards">
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Testimonials</h2>
+      <div className="testimonial-cards" role="list">
         {testimonials.map((testimonial, index) => (
           <Testimonial key={index} {...testimonial} />
         ))}
@@ -48,17 +48,23 @@ type TestimonialProps = {
 
 const Testimonial = ({ rating, author, quote, picture }: TestimonialProps) => {
   return (
-    <article className="testimonial-card">
-      <div className="rating">
+    <article className="testimonial-card" role="listitem">
+      <div className="rating" role="img" aria-label={`Rating: ${rating} out of 5 stars`}>
         {Array.from({ length: rating }, (_, i) => (
-          <span key={i} className="star">
+          <span key={i} className="star" aria-hidden="true">
             ★
           </span>
         ))}
       </div>
-      <img src={picture} alt={author} />
-      <p>"{quote}"</p>
-      <h3>- {author}</h3>
+      <img src={picture} alt={`${author} profile picture`} />
+      <blockquote>
+        <p>"{quote}"</p>
+        <footer>
+          <strong>
+            <cite>- {author}</cite>
+          </strong>
+        </footer>
+      </blockquote>
     </article>
   );
 };

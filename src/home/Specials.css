@@ -1,4 +1,4 @@
-section.specials > div {
+section#specials > div {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -6,7 +6,10 @@ section.specials > div {
   gap: var(--medium-gap);
 }
 
-section.specials > div.specials-header {
+section#specials > header {
+  display: flex;
+  flex-direction: row;
+
   justify-content: space-between;
   align-items: center;
 }

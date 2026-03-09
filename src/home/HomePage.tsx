@@ -6,7 +6,7 @@ import { Testimonials } from './Testimonials';
 
 export const HomePage = () => {
   return (
-    <main id="home-page">
+    <main id="home-page" aria-label="Little Lemon homepage">
       <Hero />
       <Specials />
       <Testimonials />

@@ -18,16 +18,16 @@ export const Dish = ({
   addToOrder,
 }: DishProps) => {
   return (
-    <article className="dish">
-      <img src={imageUrl} alt={name} className="dish-image" />
+    <article className="dish" role="listitem">
+      <img src={imageUrl} alt={`${name} dish`} className="dish-image" />
       <div className="dish-content">
-        <div className="row dish-header">
+        <header className="row dish-header">
           <h3>{name}</h3>
-          <strong className="price">{price}</strong>
-        </div>
+          <strong className="price" aria-label={`Price: ${price}`}>{price}</strong>
+        </header>
         <p className="dish-description">{description}</p>
 
-        <Button onClick={addToOrder}>Order a delivery</Button>
+        <Button onClick={addToOrder} aria-label={`Order ${name} for delivery`}>Order a delivery</Button>
       </div>
     </article>
   );

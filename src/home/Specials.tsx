@@ -29,14 +29,14 @@ const specials: DishProps[] = [
 
 export const Specials = () => {
   return (
-    <section className="specials">
-      <div className="specials-header">
-        <h1>Specials</h1>
-        <NavLink to="/menu">
+    <section id="specials" className="specials" aria-labelledby="specials-title">
+      <header className="specials-header">
+        <h2 id="specials-title">Specials</h2>
+        <NavLink to="/menu" aria-label="View full online menu">
           <Button>Online Menu</Button>
         </NavLink>
-      </div>
-      <div className="specials-dishes">
+      </header>
+      <div className="specials-dishes" role="list">
         {specials.map((dish, index) => (
           <Dish
             key={index}
