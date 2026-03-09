@@ -4,7 +4,8 @@ footer#footer {
 }
 
 footer > img,
-footer > article {
+footer > nav,
+footer > section {
   display: flex;
   flex-direction: column;
 
