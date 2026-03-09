@@ -7,7 +7,7 @@ section.testimonials > div.testimonial-cards {
     flex-direction: row;
     width: 100%;
     
-    gap: 24px;
+    gap: var(--medium-gap);
 }
 
 article.testimonial-card {
@@ -17,10 +17,10 @@ article.testimonial-card {
 
     flex: 1;
     padding: 20px;
-    gap: 12px;
+    gap: var(--small-gap);
 
     background-color: lightgray;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
 }
 
 article.testimonial-card img {

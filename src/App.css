@@ -11,6 +11,13 @@
   --sub-title-font-size: 40px;
 
   --paragraph-line-height: 1.5;
+
+  /* Spacing */
+  --small-gap: 12px;
+  --medium-gap: 24px;
+  --large-gap: 36px;
+
+  --border-radius: 12px;
 }
 
 * {
@@ -39,7 +46,13 @@ header, main, footer {
 
   width: 100%;
   max-width: 890px;
-  gap: 36px;
+  gap: var(--large-gap);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--medium-gap);
 }
 
 li {

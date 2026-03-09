@@ -7,7 +7,7 @@ footer > img, footer > article {
     flex-direction: column;
 
     flex: 1;
-    gap: 12px;
+    gap: var(--small-gap);
 }
 
 footer > img {

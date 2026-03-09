@@ -4,5 +4,5 @@
   align-items: center;
 
   min-height: 100dvh;
-  gap: 36px;
+  gap: var(--large-gap);
 }

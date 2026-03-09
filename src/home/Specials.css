@@ -3,7 +3,7 @@ section.specials > div {
     flex-direction: row;
     width: 100%;
 
-    gap: 20px;
+    gap: var(--medium-gap);
 }
 
 section.specials > div.specials-header {
