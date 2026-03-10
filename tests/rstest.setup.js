@@ -1,4 +1,10 @@
-import { expect } from '@rstest/core';
+import { expect, afterEach } from '@rstest/core';
+import { cleanup } from '@testing-library/react';
 import * as jestDomMatchers from '@testing-library/jest-dom/matchers';
 
 expect.extend(jestDomMatchers);
+
+// Cleanup DOM after each test
+afterEach(() => {
+  cleanup();
+});
