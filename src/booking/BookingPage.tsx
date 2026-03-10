@@ -33,7 +33,7 @@ export const BookingPage = () => {
   const handleNextStep = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStep((prevStep) => prevStep + 1);
-    setTimer(300); // Reinicia el temporizador a 5 minutos
+    setTimer(300);
     setInterval(() => {
       setTimer((prevTimer) => {
         if (prevTimer > 0) {
@@ -49,12 +49,20 @@ export const BookingPage = () => {
 
   const handleConfirmReservation = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para confirmar la reserva
     console.log('Reservation data:', { formData1: tableForm, formData2: customerInquiryData });
     alert('Reservation confirmed!');
   };
 
-  const minDate = new Date().toISOString().split('T')[0]; // Fecha actual en formato YYYY-MM-DD
+  const [minDate, maxDate] = useMemo(() => {
+    const today = new Date();
+    const max = new Date(today);
+    max.setDate(max.getDate() + 30);
+    return [
+      today.toISOString().split('T')[0],
+      max.toISOString().split('T')[0]
+    ];
+  }, []);
+
   const remainingTime = useMemo(() => {
     const minutes = Math.floor(timer / 60);
     const seconds = timer % 60;
@@ -98,6 +106,7 @@ export const BookingPage = () => {
                   id="date"
                   name="date"
                   min={minDate}
+                  max={maxDate}
                   value={tableForm.date}
                   onChange={updateTableFormField}
                   required
