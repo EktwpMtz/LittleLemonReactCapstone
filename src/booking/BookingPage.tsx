@@ -4,9 +4,44 @@ import './BookingPage.css';
 export const BookingPage = () => {
   const [step, setStep] = useState(1);
 
-  const handleNextStep = () => {
+  // Formulario paso 1
+  const [tableForm, setTableForm] = useState({
+    guests: '',
+    date: '',
+    time: '',
+  });
+
+  // Formulario paso 2
+  const [customerInquiryData, setCustomerInquiryData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    requests: '',
+  });
+
+  const updateTableFormField = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setTableForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const updateCustomerInquiryDataField = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setCustomerInquiryData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleNextStep = (e: React.SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setStep((prevStep) => prevStep + 1);
   };
+
+  const handleConfirmReservation = (e: React.SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica para confirmar la reserva
+    console.log('Reservation data:', { formData1: tableForm, formData2: customerInquiryData });
+    alert('Reservation confirmed!');
+  };
+
+  const minDate = new Date().toISOString().split('T')[0]; // Fecha actual en formato YYYY-MM-DD
 
   return (
     <section className="booking">
@@ -24,24 +59,44 @@ export const BookingPage = () => {
         <hr></hr>
         {step === 1 ? (
           <div className="booking-form" data-step={1}>
-            <form>
-              <label htmlFor="guests">Number of guests:</label>
-              <input
-                type="number"
-                id="guests"
-                name="guests"
-                min="1"
-                max="20"
-                required
-              />
-              <br />
-              <label htmlFor="date">Date:</label>
-              <input type="date" id="date" name="date" required />
-              <br />
-              <label htmlFor="time">Time:</label>
-              <input type="time" id="time" name="time" required />
-              <br />
-              <button type="submit" onClick={handleNextStep}>
+            <form onSubmit={handleNextStep}>
+              <div className="form-field">
+                <label htmlFor="guests">Number of guests:</label>
+                <input
+                  type="number"
+                  id="guests"
+                  name="guests"
+                  min="1"
+                  max="20"
+                  value={tableForm.guests}
+                  onChange={updateTableFormField}
+                  required
+                />
+              </div>
+              <div className="form-field">
+                <label htmlFor="date">Date:</label>
+                <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  min={minDate}
+                  value={tableForm.date}
+                  onChange={updateTableFormField}
+                  required
+                />
+              </div>
+              <div className="form-field">
+                <label htmlFor="time">Time:</label>
+                <input
+                  type="time"
+                  id="time"
+                  name="time"
+                  value={tableForm.time}
+                  onChange={updateTableFormField}
+                  required
+                />
+              </div>
+              <button type="submit">
                 Continue
               </button>
             </form>
@@ -57,19 +112,50 @@ export const BookingPage = () => {
           </div>
         ) : (
           <div className="booking-form" data-step={2}>
-            <form>
-              <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" required />
-              <br />
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-              <br />
-              <label htmlFor="phone">Phone:</label>
-              <input type="tel" id="phone" name="phone" required />
-              <br />
-              <label htmlFor="requests">Ocassion</label>
-              <input type="text" id="requests" name="requests" />
-              <br />
+            <form onSubmit={handleConfirmReservation}>
+              <div className="form-field">
+                <label htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={customerInquiryData.name}
+                  onChange={updateCustomerInquiryDataField}
+                  required
+                />
+              </div>
+              <div className="form-field">
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={customerInquiryData.email}
+                  onChange={updateCustomerInquiryDataField}
+                  required
+                />
+              </div>
+              <div className="form-field">
+                <label htmlFor="phone">Phone:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={customerInquiryData.phone}
+                  onChange={updateCustomerInquiryDataField}
+                  required
+                />
+              </div>
+              <div className="form-field">
+                <label htmlFor="requests">Occasion:</label>
+                <input
+                  type="text"
+                  id="requests"
+                  name="requests"
+                  value={customerInquiryData.requests}
+                  onChange={updateCustomerInquiryDataField}
+                />
+              </div>
 
               <button type="submit">Confirm Reservation</button>
             </form>
