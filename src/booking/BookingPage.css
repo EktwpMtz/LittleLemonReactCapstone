@@ -123,20 +123,19 @@ div.booking-form button:disabled {
   width: 100%;
 }
 
-.select-wrapper .material-symbols-outlined,
-.heart-icon {
+.select-wrapper .material-symbols-outlined {
   position: absolute;
   left: var(--small-gap);
   z-index: 1;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   color: var(--primary-2-color);
   pointer-events: none;
   flex-shrink: 0;
 }
 
 .select-wrapper .material-symbols-outlined {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
 }
 
