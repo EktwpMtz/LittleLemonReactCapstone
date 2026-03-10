@@ -120,16 +120,24 @@ div.booking-form button:disabled {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
+.select-wrapper .material-symbols-outlined,
 .heart-icon {
   position: absolute;
   left: var(--small-gap);
+  z-index: 1;
   width: 20px;
   height: 20px;
   color: var(--primary-2-color);
   pointer-events: none;
   flex-shrink: 0;
+}
+
+.select-wrapper .material-symbols-outlined {
+  font-size: 20px;
+  line-height: 1;
 }
 
 div.booking-form select {

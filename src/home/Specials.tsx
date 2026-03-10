@@ -9,6 +9,7 @@ const specials: DishProps[] = [
     description:
       'A refreshing blend of crisp lettuce, ripe tomatoes, cucumbers, Kalamata olives, and tangy feta cheese, all tossed in a light vinaigrette dressing.',
     price: '$18.99',
+    category: 'Starters',
     imageUrl: '/greek salad.jpg',
   },
   {
@@ -16,6 +17,7 @@ const specials: DishProps[] = [
     description:
       'A zesty and sweet treat featuring layers of tangy lemon curd, fluffy meringue, and a buttery graham cracker crust, creating a perfect balance of flavors in every bite.',
     price: '$15.99',
+    category: 'Desserts',
     imageUrl: '/lemon dessert.jpg',
   },
   {
@@ -23,6 +25,7 @@ const specials: DishProps[] = [
     description:
       'Grilled slices of crusty bread topped with a vibrant mixture of diced tomatoes, fresh basil, garlic, and a drizzle of olive oil, creating a delicious and refreshing appetizer.',
     price: '$13.99',
+    category: 'Starters',
     imageUrl: '/bruchetta.svg',
   },
 ];
@@ -42,6 +45,7 @@ export const Specials = () => {
             key={index}
             name={dish.name}
             description={dish.description}
+            category={dish.category}
             price={dish.price}
             imageUrl={dish.imageUrl}
           />

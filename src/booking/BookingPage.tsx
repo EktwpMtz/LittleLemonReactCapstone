@@ -20,7 +20,7 @@ export const BookingPage = () => {
     requests: '',
   });
 
-  const updateTableFormField = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const updateTableFormField = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setTableForm((prev) => ({ ...prev, [name]: value }));
   };
@@ -114,14 +114,34 @@ export const BookingPage = () => {
               </div>
               <div className="form-field">
                 <label htmlFor="time">Time:</label>
-                <input
-                  type="time"
-                  id="time"
-                  name="time"
-                  value={tableForm.time}
-                  onChange={updateTableFormField}
-                  required
-                />
+                <div className='select-wrapper'>
+                  <span className="material-symbols-outlined">
+                    schedule
+                  </span>
+                  <select
+                    id="time"
+                    name="time"
+                    value={tableForm.time}
+                    onChange={updateTableFormField}
+                    required
+                  >
+                    <option value="">Select a time</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="11:30">11:30 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="13:30">1:30 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="18:30">6:30 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="19:30">7:30 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                    <option value="21:00">9:00 PM</option>
+                  </select>
+                </div>
               </div>
               <button type="submit">
                 Continue
@@ -176,9 +196,9 @@ export const BookingPage = () => {
               <div className="form-field">
                 <label htmlFor="requests">Occasion:</label>
                 <div className="select-wrapper">
-                  <svg className="heart-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
+                  <span className="material-symbols-outlined">
+                    favorite
+                  </span>
                   <select
                     id="requests"
                     name="requests"
