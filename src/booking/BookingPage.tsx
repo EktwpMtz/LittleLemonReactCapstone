@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import './BookingPage.css';
 
 export const BookingPage = () => {
+  const [timer, setTimer] = useState(300); // 5 minutes en segundos
   const [step, setStep] = useState(1);
 
   // Formulario paso 1
@@ -24,7 +25,7 @@ export const BookingPage = () => {
     setTableForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const updateCustomerInquiryDataField = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const updateCustomerInquiryDataField = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setCustomerInquiryData((prev) => ({ ...prev, [name]: value }));
   };
@@ -32,6 +33,18 @@ export const BookingPage = () => {
   const handleNextStep = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStep((prevStep) => prevStep + 1);
+    setTimer(300); // Reinicia el temporizador a 5 minutos
+    setInterval(() => {
+      setTimer((prevTimer) => {
+        if (prevTimer > 0) {
+          return prevTimer - 1;
+        } else {
+          alert('Your reservation has expired. Please start again.');
+          setStep(1);
+          return 0;
+        }
+      });
+    }, 1000);
   };
 
   const handleConfirmReservation = (e: React.SubmitEvent<HTMLFormElement>) => {
@@ -42,6 +55,11 @@ export const BookingPage = () => {
   };
 
   const minDate = new Date().toISOString().split('T')[0]; // Fecha actual en formato YYYY-MM-DD
+  const remainingTime = useMemo(() => {
+    const minutes = Math.floor(timer / 60);
+    const seconds = timer % 60;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }, [timer]);
 
   return (
     <section className="booking">
@@ -148,20 +166,29 @@ export const BookingPage = () => {
               </div>
               <div className="form-field">
                 <label htmlFor="requests">Occasion:</label>
-                <input
-                  type="text"
-                  id="requests"
-                  name="requests"
-                  value={customerInquiryData.requests}
-                  onChange={updateCustomerInquiryDataField}
-                />
+                <div className="select-wrapper">
+                  <svg className="heart-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  <select
+                    id="requests"
+                    name="requests"
+                    value={customerInquiryData.requests}
+                    onChange={updateCustomerInquiryDataField}
+                  >
+                    <option value="">Select an occasion</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Engagement">Engagement</option>
+                    <option value="Anniversary">Anniversary</option>
+                  </select>
+                </div>
               </div>
 
               <button type="submit">Confirm Reservation</button>
             </form>
             <div>
               <h2>You're almost there!</h2>
-              <p>We're holding this table for you for: 5:00</p>
+              <p>We're holding this table for you for: {remainingTime}</p>
               <h3>Need to make changes?</h3>
               <p>
                 You can modify your reservation up to 24 hours before your
