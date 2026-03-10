@@ -138,36 +138,3 @@ div.booking-form button:disabled {
   font-size: 24px;
   line-height: 1;
 }
-
-div.booking-form select {
-  width: 100%;
-  padding: var(--small-gap) var(--small-gap) var(--small-gap) calc(var(--small-gap) + 24px + var(--small-gap));
-  font-family: var(--paragraph-font-family);
-  font-size: var(--paragraph-font-size);
-  border: 1px solid var(--primary-2-color);
-  border-radius: var(--border-radius);
-  background-color: var(--highlight-1-color);
-  color: var(--highlight-2-color);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23495e57' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right var(--small-gap) center;
-  padding-right: calc(var(--small-gap) + 12px + var(--small-gap));
-}
-
-div.booking-form select:hover {
-  border-color: var(--primary-1-color);
-}
-
-div.booking-form select:focus {
-  border-color: var(--primary-1-color);
-  outline: none;
-}
-
-div.booking-form select option {
-  padding: var(--small-gap);
-  background-color: var(--highlight-1-color);
-  color: var(--highlight-2-color);
-}

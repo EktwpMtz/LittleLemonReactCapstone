@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { fetchAPI } from '../lib/api';
+import { fetchAPI, submitAPI } from '../lib/api';
 import './BookingPage.css';
 
 export const BookingPage = () => {
@@ -58,8 +58,9 @@ export const BookingPage = () => {
 
   const handleConfirmReservation = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Reservation data:', { formData1: tableForm, formData2: customerInquiryData });
-    alert('Reservation confirmed!');
+    console.log('Reservation data:', { tableForm, customerInquiryData });
+    submitAPI({ tableForm, customerInquiryData });
+    alert('Your reservation has been confirmed! We look forward to serving you.');
   };
 
   const [minDate, maxDate] = useMemo(() => {
@@ -133,6 +134,7 @@ export const BookingPage = () => {
                     value={tableForm.time}
                     onChange={updateTableFormField}
                     required
+                    disabled={!availableTimes.length}
                   >
                     <option value="" disabled>Select a time</option>
                     {availableTimes.map((time) => (
