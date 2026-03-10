@@ -28,3 +28,19 @@ section#hero > img {
   border-radius: var(--border-radius);
   background-color: lightgray;
 }
+
+@media (max-width: 768px) {
+  div.hero-container {
+    padding: var(--medium-gap);
+  }
+
+  section#hero {
+    flex-direction: column;
+    gap: var(--medium-gap);
+  }
+
+  section#hero > img {
+    max-width: 100%;
+    order: -1;
+  }
+}

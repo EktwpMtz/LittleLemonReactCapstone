@@ -31,3 +31,14 @@ article.testimonial-card img {
 
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  section#testimonials > div.testimonial-cards {
+    flex-direction: column;
+  }
+
+  article.testimonial-card img {
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -24,3 +24,26 @@ nav a {
   font-weight: bold;
   color: black;
 }
+
+@media (max-width: 768px) {
+  header#header {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--medium-gap);
+    padding: var(--medium-gap) 0;
+  }
+
+  header img {
+    width: 120px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--small-gap);
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+}

@@ -138,3 +138,25 @@ div.booking-form button:disabled {
   font-size: 24px;
   line-height: 1;
 }
+
+@media (max-width: 768px) {
+  section.booking {
+    padding: 0;
+  }
+
+  article.booking-process {
+    padding: var(--medium-gap);
+  }
+
+  article.booking-process > img {
+    height: 250px;
+  }
+
+  article.booking-process > div {
+    flex-direction: column;
+  }
+
+  div.booking-form {
+    flex-direction: column;
+  }
+}

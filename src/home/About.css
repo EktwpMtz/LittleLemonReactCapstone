@@ -9,3 +9,13 @@ section#about img {
   background-color: lightgray;
   border-radius: var(--border-radius);
 }
+
+@media (max-width: 768px) {
+  section#about {
+    flex-direction: column;
+  }
+
+  section#about img {
+    width: 100%;
+  }
+}
