@@ -1,9 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { fetchAPI } from '../lib/api';
 import './BookingPage.css';
 
 export const BookingPage = () => {
   const [timer, setTimer] = useState(300); // 5 minutes en segundos
   const [step, setStep] = useState(1);
+  const [availableTimes, setAvailableTimes] = useState<string[]>([]);
 
   // Formulario paso 1
   const [tableForm, setTableForm] = useState({
@@ -19,6 +21,13 @@ export const BookingPage = () => {
     phone: '',
     requests: '',
   });
+
+  useEffect(() => {
+    if (tableForm.guests && tableForm.date) {
+      const result = fetchAPI(new Date(tableForm.date));
+      setAvailableTimes(result);
+    }
+  }, [tableForm]);
 
   const updateTableFormField = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -125,21 +134,12 @@ export const BookingPage = () => {
                     onChange={updateTableFormField}
                     required
                   >
-                    <option value="">Select a time</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="11:30">11:30 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="12:30">12:30 PM</option>
-                    <option value="13:00">1:00 PM</option>
-                    <option value="13:30">1:30 PM</option>
-                    <option value="14:00">2:00 PM</option>
-                    <option value="18:00">6:00 PM</option>
-                    <option value="18:30">6:30 PM</option>
-                    <option value="19:00">7:00 PM</option>
-                    <option value="19:30">7:30 PM</option>
-                    <option value="20:00">8:00 PM</option>
-                    <option value="20:30">8:30 PM</option>
-                    <option value="21:00">9:00 PM</option>
+                    <option value="" disabled>Select a time</option>
+                    {availableTimes.map((time) => (
+                      <option key={time} value={time}>
+                        {time}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>

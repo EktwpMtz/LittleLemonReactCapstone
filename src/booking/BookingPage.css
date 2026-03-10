@@ -17,7 +17,7 @@ article.booking-process > img {
 article.booking-process {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--medium-gap);
 
   padding: 20px;
 }
@@ -25,7 +25,7 @@ article.booking-process {
 article.booking-process > div {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: var(--medium-gap);
 }
 
 div.booking-steps {
@@ -47,7 +47,7 @@ div.booking-steps > span[data-active="true"] {
 }
 
 div.booking-form {
-  gap: 12px;
+  gap: var(--small-gap);
 }
 
 div.booking-form > form,
@@ -55,7 +55,7 @@ div.booking-form > div {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 12px;
+  gap: var(--small-gap);
 }
 
 div.booking-form .form-field {

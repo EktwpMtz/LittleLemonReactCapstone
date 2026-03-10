@@ -5,7 +5,7 @@ const seededRandom = (seed) => {
   return () => (s = (s * a) % m) / m;
 };
 
-const fetchAPI = (date) => {
+export const fetchAPI = (date) => {
   const result = [];
   const random = seededRandom(date.getDate());
 
@@ -19,4 +19,4 @@ const fetchAPI = (date) => {
   }
   return result;
 };
-const submitAPI = (formData) => true;
+export const submitAPI = (formData) => true;
