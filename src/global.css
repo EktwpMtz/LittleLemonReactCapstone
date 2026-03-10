@@ -102,3 +102,11 @@ a {
 .primary-text {
   color: var(--primary-1-color);
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

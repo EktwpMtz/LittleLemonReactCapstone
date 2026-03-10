@@ -6,6 +6,7 @@ export type DishProps = {
   description: string;
   price: string;
   imageUrl: string;
+  category: string;
 
   addToOrder?: () => void;
 };
@@ -15,6 +16,7 @@ export const Dish = ({
   description,
   price,
   imageUrl,
+  category,
   addToOrder,
 }: DishProps) => {
   return (
